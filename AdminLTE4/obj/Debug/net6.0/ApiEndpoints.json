@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "FILog.Controllers.QualityInspectionApiController",
+    "Method": "GetAll",
+    "RelativePath": "QualityInspection/ReadData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FILog.Controllers.QualityInspectionApiController",
+    "Method": "GetMaterialByOrderNumber",
+    "RelativePath": "QualityInspectionApi/GetByOrder/{orderNumber}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNumber",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

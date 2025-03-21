@@ -1,0 +1,40 @@
+﻿@{
+    var products = new List<dynamic>
+{
+        new { Id = 1, Name = "Laptop", Price = 1500.00M, Stock = 10 },
+        new { Id = 2, Name = "Smartphone", Price = 800.00M, Stock = 20 },
+        new { Id = 3, Name = "Tablet", Price = 500.00M, Stock = 15 }
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product List</title>
+</head>
+<body>
+    <h1>Product List</h1>
+
+    <table border="1" cellpadding="5" cellspacing="0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Id</td>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Stock</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

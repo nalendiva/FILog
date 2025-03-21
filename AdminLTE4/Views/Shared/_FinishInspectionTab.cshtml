@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link @(ViewBag.ActiveTab == "FinalInspectionFinish" ? "active": "")" href="@Url.Action("FinishInspection","QualityInspection")"> Final Inspection </a>
+    </li>
+    <li class="nav-item">
+         <a class="nav-link @(ViewBag.ActiveTab == "ReceivingInspectionFinish" ? "active": "")" href="@Url.Action("ReceivingInspectionFinish","QualityInspection")"> Receiving Inspection </a>
+    </li>
+    <li class="nav-item">
+         <a class="nav-link @(ViewBag.ActiveTab == "QualityAlertFinish" ? "active": "")" href="@Url.Action("QualityAlertFinish","QualityInspection")"> Quality Alert </a>
+    </li>
+</ul>

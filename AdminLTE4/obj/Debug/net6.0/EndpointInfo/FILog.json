@@ -1,0 +1,50 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "QualityInspection API",
+    "description": "API for Quality Inspection",
+    "contact": {
+      "name": "Ale",
+      "url": "https://example.com",
+      "email": "muhammadnalendraz@gmail.com"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/QualityInspection/ReadData": {
+      "get": {
+        "tags": [
+          "QualityInspectionApi"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/QualityInspectionApi/GetByOrder/{orderNumber}": {
+      "get": {
+        "tags": [
+          "QualityInspectionApi"
+        ],
+        "parameters": [
+          {
+            "name": "orderNumber",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": { }
+}
