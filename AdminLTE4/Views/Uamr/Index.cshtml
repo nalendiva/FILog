@@ -1,0 +1,141 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="mt-2">
+    <div class="row gx-4">
+        <div class="col-md-6" >
+            <div class="card">
+                <h2 class="card-header d-flex align-items-center justify-content-center">Non-UAMR</h2>
+                <div class="card-body">
+                    <div class="table-responsive">
+
+                        <table id="dmsTable" class="display table table-bordered table-striped table-hover" style="width:100%">
+                            <thead class="table-secondary align-middle text-center text-nowrap">
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Part Number</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Batch Number</th>
+                                    <th>Order Status</th>
+                                    <th>Current OP</th>
+                                    <th>Current WC</th>
+                                </tr>
+                            </thead>
+                            <tbody class="align-middle text-center text-nowrap">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-6">
+            <div class="card">
+                <h2 class="card-header d-flex align-items-center justify-content-center" >UAMR</h2>
+                <div class="card-body">
+                    <div class="table-responsive">
+
+                        <table id="dmsTableUamr" class="display table table-bordered table-striped table-hover" style="width:100%">
+                            <thead class="table-secondary align-middle text-center text-nowrap">
+                                <tr>
+                                    <th>Order Number</th>
+                                    <th>Part Number</th>
+                                    <th>Description</th>
+                                    <th>Quantity</th>
+                                    <th>Batch Number</th>
+                                    <th>Order Status</th>
+                                    <th>Current OP</th>
+                                    <th>Current WC</th>
+                                </tr>
+
+                            </thead>
+                            <tbody class="align-middle text-center text-nowrap">
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+@section Scripts{
+    <script>
+      $(document).ready(function () {
+
+
+          $('#dmsTable').DataTable({
+              processing: true,
+              serverSide: true,
+              scrollX: true,
+              autoWidth: false,
+              responsive: false,
+              fixedHeader: true,
+              ajax: {
+                  url: '/Uamr/ReadDataAll',
+                  type: 'GET',
+                  data: function (d) {
+                      d.status = 'UAMR'; // hanya UAMR
+                      d.exclude = true;
+                  }
+              },
+              columns: [
+                      { data: 'orderNumber', className: 'text-center' },
+                      { data: 'partNumber', className: 'text-center' },
+                      { data: 'description', className: 'text-center' },
+                      { data: 'quantity', className: 'text-center' },
+                      { data: 'batchNumber', className: 'text-center' },
+                      { data: 'order_Status', className: 'text-center' },
+                      { data: 'current_OP', className: 'text-center' },
+                      { data: 'current_WC', className: 'text-center' }
+              ],
+              initComplete: function () {
+                  // Tambahkan margin bawah pada input search
+                      $('#dmsTable_filter').addClass('mb-3');
+              }
+
+          });
+        $('#dmsTableUamr').DataTable({
+            processing: true,
+              scrollX: true,
+            serverSide: true,
+            autoWidth: false,
+            responsive: false,
+            fixedHeader: true,
+            ajax: {
+                url: '/Uamr/ReadDataAll',
+                type: 'GET',
+                data: function (d) {
+                    d.status = 'UAMR'; // hanya UAMR
+                    d.exclude = false;
+                }
+            },
+            columns: [
+                    { data: 'orderNumber', className: 'text-center' },
+                    { data: 'partNumber', className: 'text-center' },
+                    { data: 'description', className: 'text-center' },
+                    { data: 'quantity', className: 'text-center' },
+                    { data: 'batchNumber', className: 'text-center' },
+                    { data: 'order_Status', className: 'text-center' },
+                    { data: 'current_OP', className: 'text-center' },
+                    { data: 'current_WC', className: 'text-center' }
+            ],
+            initComplete: function () {
+                  // Tambahkan margin bawah pada input search
+                  $('#dmsTableUamr_filter').addClass('mb-3');
+            }
+        });
+
+
+
+       });
+    </script>
+}

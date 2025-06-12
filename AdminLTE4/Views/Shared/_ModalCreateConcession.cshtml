@@ -1,0 +1,55 @@
+﻿<!-- Modal Create -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <form id="createForm" class="modal-content shadow rounded-3 border-0">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title" id="createModalLabel">Tambah Data Material</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body px-4 py-3">
+                <input type="hidden" id="create-id" />
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="create-order" class="form-label">Order Number</label>
+                        <input type="text" class="form-control" id="create-order" placeholder="Masukkan Order Number" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-batch" class="form-label">Batch Number</label>
+                        <input type="text" class="form-control" id="create-batch" placeholder="Masukkan Batch Number" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-part" class="form-label">Part Number</label>
+                        <input type="text" class="form-control" id="create-part" placeholder="Masukkan Part Number" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="create-description" placeholder="Masukkan Deskripsi" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-concession" class="form-label">Concession</label>
+                        <input type="text" class="form-control" id="create-concession" placeholder="Masukkan Concession" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-remarks" class="form-label">Remarks</label>
+                        <input type="text" class="form-control" id="create-remarks" placeholder="Masukkan Catatan" />
+                    </div>
+                    <div class="col-md-12">
+                        <label for="create-labelForm" class="form-label">Label Form</label>
+                        <input type="text" class="form-control" id="create-labelForm" placeholder="Masukkan Label Form" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer px-4 py-3">
+                <button type="submit" class="btn btn-secondary">
+                    <i class="bi bi-save me-1"></i> Simpan
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle me-1"></i> Batal
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

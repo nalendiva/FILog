@@ -6,14 +6,12 @@ wwwroot\css\adminlte\adminlte.rtl.css
 wwwroot\css\adminlte\adminlte.rtl.css.map
 wwwroot\css\adminlte\adminlte.rtl.min.css
 wwwroot\css\adminlte\adminlte.rtl.min.css.map
-wwwroot\css\FinishInspection.css
 wwwroot\css\QualityAlert.css
 wwwroot\css\RackInformation.css
 wwwroot\css\ReceivingInspection.css
 wwwroot\css\ReceivingInspectionFinish.css
 wwwroot\css\site.css
 wwwroot\css\StartsInspection.css
-wwwroot\css\StyleSheet.css
 wwwroot\css\UploadAfter.css
 wwwroot\dist\assets\img\AdminLTEFullLogo.png
 wwwroot\dist\assets\img\AdminLTELogo.png
@@ -114,3 +112,10 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\uploads\42c9faa5-cc5d-4fec-8c7f-f43553f77171.png
+wwwroot\uploads\42d30ab0-4f58-488e-87d0-b39356b98e05.jpg
+wwwroot\uploads\5f962a0e-4a1a-4341-9ab2-f0914b751caf.png
+wwwroot\uploads\91722542-7c0a-4c59-80d0-766badf042a1.jpg
+wwwroot\uploads\989ae2f1-fb57-44b5-baea-094e3312b0c4.jpg
+wwwroot\uploads\a51303bc-7f25-4a4d-8346-d2469bc4c2ee.jpeg
+wwwroot\uploads\c7a22016-894e-4a7f-9673-94f90a7e2cb1.jpg

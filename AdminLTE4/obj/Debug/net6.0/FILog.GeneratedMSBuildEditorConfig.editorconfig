@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 6.0
 build_property.EnableCodeStyleSeverity = 
 
+[D:/Collins/FIlog/AdminLTE4/Views/Conpro/Concession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ucHJvXENvbmNlc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Conpro/ProductionPermit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29ucHJvXFByb2R1Y3Rpb25QZXJtaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Collins/FIlog/AdminLTE4/Views/Home/dodol.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxkb2RvbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -30,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Collins/FIlog/AdminLTE4/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/QualityAlert/QualityAlert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVhbGl0eUFsZXJ0XFF1YWxpdHlBbGVydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Collins/FIlog/AdminLTE4/Views/QualityInspection/FinishInspection.cshtml]
@@ -68,6 +80,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXG9yaVxfVmFsaWRhdGlvblNjcmlwdHNQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Collins/FIlog/AdminLTE4/Views/Shared/_ConproTab.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Db25wcm9UYWIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Collins/FIlog/AdminLTE4/Views/Shared/_FinishInspectionTab.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GaW5pc2hJbnNwZWN0aW9uVGFiLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -78,6 +94,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Collins/FIlog/AdminLTE4/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Shared/_ModalCreateConcession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbENyZWF0ZUNvbmNlc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Shared/_ModalCreateProductionPermit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbENyZWF0ZVByb2R1Y3Rpb25QZXJtaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Shared/_ModalUpdateConcession.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbFVwZGF0ZUNvbmNlc3Npb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Shared/_ModalUpdateFILog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbFVwZGF0ZUZJTG9nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Shared/_ModalUpdateProductionPermit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Nb2RhbFVwZGF0ZVByb2R1Y3Rpb25QZXJtaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Collins/FIlog/AdminLTE4/Views/Shared/_Navbar.cshtml]
@@ -102,6 +138,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Collins/FIlog/AdminLTE4/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Collins/FIlog/AdminLTE4/Views/Uamr/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVWFtclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Collins/FIlog/AdminLTE4/Views/_ViewImports.cshtml]

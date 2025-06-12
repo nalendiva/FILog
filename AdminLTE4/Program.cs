@@ -1,13 +1,21 @@
 using FILog.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication.Negotiate;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Konfigurasi Database
 builder.Services.AddDbContext<OpsProdDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+// Tambahkan service autentikasi Negotiate (Windows Auth)
+builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme).AddNegotiate();
+
+builder.Services.AddAuthorization();
+
 // Tambahkan Controller dan View
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddEndpointsApiExplorer();
 
 // Konfigurasi Swagger (Hanya Aktif di Development Mode)
@@ -47,6 +55,7 @@ else
 app.UseStaticFiles();
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization(); // Tambahkan jika nanti butuh autentikasi
 
 // Rute Default

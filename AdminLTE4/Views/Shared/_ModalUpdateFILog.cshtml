@@ -1,0 +1,362 @@
+﻿<div class="modal fade" id="editModalFi" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <form id="editForm" class="modal-content shadow rounded-3 border-0 position-relative">
+
+            <!-- Modal Header -->
+            <div class="modal-header bg-warning-subtle text-dark">
+                <h5 class="modal-title">EDIT DATA</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal Body with Tabs -->
+            <div class="modal-body px-4 py-3">
+
+                <input type="hidden" id="edit-id" />
+
+                <input type="hidden" id="edit-price" />
+                
+
+
+                <!-- Placeholder Alert -->
+                @* <div id="formAlert" class="alert d-none align-items-center rounded-3 px-3 py-2 mb-3" role="alert"> *@
+                @*     <i id="formAlertIcon" class="me-2 fs-5"></i> *@
+                @*     <div id="formAlertText"></div> *@
+                @* </div> *@
+
+                <div class="sticky-top bg-white z-3">
+
+                    <div class="d-flex flex-wrap gap-3">
+
+                        <!-- Alert Success -->
+                        <div id="alert-kfr" class="alert d-flex align-items-center justify-content-center rounded-3 px-3 py-2 mb-3 flex-grow-1 flex-basis-0 bg-warning"  role="alert">
+                            <i class="bi bi-info-circle-fill me-2 fs-5 text-success"></i>
+                            <div class="">
+                                KFR
+                            </div>
+                        </div>
+                        <!-- Alert Success -->
+                        <div id="alert-concession" class="alert bg-warning d-flex align-items-center justify-content-center rounded-3 px-3 py-2 mb-3 flex-grow-1 flex-basis-0" role="alert">
+                            <i class="bi bi-info-circle-fill me-2 fs-5 text-success"></i>
+                            <div>
+                                Concession
+                            </div>
+                        </div>
+                        <!-- Alert Success -->
+                        <div id="alert-prodpermit" class="alert bg-warning d-flex align-items-center justify-content-center rounded-3 px-3 py-2 mb-3 flex-grow-1 flex-basis-0" role="alert">
+                            <i class="bi bi-info-circle-fill me-2 fs-5 text-success"></i>
+                            <div>
+                                Production Permit
+                            </div>
+                        </div>
+
+                        <!-- Alert Info -->
+                        <div id="alert-sp" class="alert bg-warning d-flex align-items-center justify-content-center flex-grow-1 flex-basis-0" role="alert">
+                            <i class="bi bi-info-circle-fill me-2 fs-5 text-success"></i>
+                            <div>
+                                Special Process
+
+                            </div>
+                        </div>
+
+                        <!-- Alert Danger -->
+                        <div id="alert-tag" class="alert bg-warning d-flex align-items-center justify-content-center flex-grow-1 flex-basis-0" role="alert">
+                            <i class="bi bi-info-circle-fill me-2 fs-5 text-success"></i>
+                            <div>
+                                Tag Label
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Tabs Navigation -->
+                    <ul class="nav nav-tabs mb-3" id="editTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="tab-info-tab" data-bs-toggle="tab" data-bs-target="#tab-info" type="button" role="tab">
+                                Details - 1
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-detail-tab" data-bs-toggle="tab" data-bs-target="#tab-detail" type="button" role="tab">
+                                Detail - 2
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="tab-quantity-tab" data-bs-toggle="tab" data-bs-target="#tab-quantity" type="button" role="tab">
+                                Quantity
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tabs Content -->
+                <div class="tab-content border-2 border-dark" id="editTabContent">
+
+                    <!-- Tab 1: Info Umum -->
+                    <div class="tab-pane fade show active" id="tab-info" role="tabpanel">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end" >
+
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Doc # :</label>
+                                    <input id="edit-doc" type="text" class="form-control text-center" style="width: 150px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-start">
+
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Order # :</label>
+                                    <input id="edit-order" type="text" class="form-control text-center" style="width: 150px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Part # :</label>
+                                    <input id="edit-part" type="text" class="form-control text-center" style="width: 150px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-start">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Description :</label>
+                                    <input id="edit-description" type="text" class="form-control" style="width: 300px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Batch # :</label>
+                                    <input id="edit-batch" type="text" class="form-control text-center" style="width: 150px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Operation :</label>
+                                    <input id="edit-operation" type="text" class="form-control text-center" style="width: 100px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Cell :</label>
+                                    <input id="edit-cell" type="text" class="form-control text-center" style="width: 100px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Concession :</label>
+                                    <input id="edit-concession" type="text" class="form-control text-center" style="width: 100px;" readonly />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                    <div id="edit-permit-group" class="w-100"></div> <!-- input akan dibuat di sini -->
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Order Status :</label>
+                                    <input id="edit-status" type="text" class="form-control text-center" style="width: 100px;" readonly />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab 2: Detail Inspeksi -->
+                    <div class="tab-pane fade" id="tab-detail" role="tabpanel">
+                        <div class="row g-3 mt-2">
+
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Start Date :</label>
+                                    <input id="edit-startdate" type="date" class="form-control text-center me-3" style="width: 100px;" readonly />
+                                    <input id="edit-starttime" type="time" class="form-control text-center" style="width: 100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-start">
+
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Finish Date :</label>
+                                    <input id="edit-enddate" type="date" class="form-control text-center" style="width: 100px;" />
+                                    <input id="edit-endtime" type="time" class="form-control text-center ms-3" style="width: 100px;"  />
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Week :</label>
+                                    <input id="edit-week" type="number" class="form-control text-center" readonly style="width: 100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center  justify-content-start">
+                                    <label class="form-label me-2 text-end" style="width: 100px;">Labor Time :</label>
+                                    <input id="edit-labor" type="number" class="form-control text-center" readonly style="width: 100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center  justify-content-end">
+                                <label class="form-label me-2 text-end" style="width: 100px;">KFR :</label>
+                                    <input id="edit-kfr" type="text" class="form-control text-center" readonly style="width: 100px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center  justify-content-start">
+                                <label class="form-label me-2 text-end" style="width: 100px;">QN Number :</label>
+                                    <input id="edit-qn" type="text" class="form-control text-center" readonly style="width: 150px;" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center justify-content-end">
+                                <label class="form-label me-2 text-end" style="width: 100px;">Remark :</label>
+                                    <input id="edit-remarks" type="text" class="form-control text-center" readonly style="width: 100px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="tab-quantity" role="tabpanel">
+
+                        <div class="container mt-4">
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <!-- Lebar maksimal 50% dari layar (6 dari 12 kolom) -->
+
+                                    <div class="mb-3 d-flex align-items-center justify-content-center">
+                                        <label for="edit-qty" class="me-2 text-end" style="width: 100px;">Quantity :</label>
+                                        <input id="edit-qty" type="text" class="form-control text-center" readonly style="width: 100px;" />
+                                    </div>
+
+                                    <div class="mb-3 d-flex align-items-center justify-content-center">
+                                        <label for="edit-acc" class="me-2 text-end" style="width: 100px;">Accepted :</label>
+                                        <input id="edit-acc" type="text" class="form-control text-center" style="width: 100px;" />
+                                    </div>
+
+                                    <div class="mb-3 d-flex align-items-center justify-content-center">
+                                        <label for="edit-rejected" class="me-2 text-end" style="width: 100px;">Rejected :</label>
+                                        <input id="edit-rejected" type="text" class="form-control text-center" style="width: 100px;" />
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- Separator -->
+                <div class="border-top border-2 border-dark mt-4 pt-3"></div>
+                <div class="row g-3 mt-2">
+
+                    <div class="col-md-6">
+                        <div class="row d-flex align-items-center gap-2">
+                            <div class="col-3">
+
+                                <label class="form-label text-end">* Job Type :</label>
+                            </div>
+                            <div class="col-6">
+
+                                <select id="edit-job" class="form-select text-center">
+                                    <option class="text-center" selected disabled>Choose...</option>
+                                    <option class="text-center" >100% Visual Inspection</option>
+                                    <option class="text-center">Containment</option>
+                                    <option class="text-center">FI</option>
+                                    <option class="text-center">Receiving Inspection</option>
+                                    <option class="text-center">QA</option>
+                                </select>   
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="d-flex align-items-center">
+                            <div class="col-3">
+
+                                <label class="form-label text-end">* DWG Rev :</label>
+                            </div>
+                            <div class="col-4">
+
+                                <input type="text" id="edit-drawing" class="form-control text-center" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="d-flex align-items-center">
+                            <div class="col-3">
+
+                                <label class="form-label">SAP :</label>
+                            </div>
+                            <div class="col-4">
+
+                                <input type="text" id="edit-SAP" class="form-control" readonly/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-center gap-2">
+
+                            <div class="col-3">
+
+                                <label class="form-label text-end">* Employee # :</label>
+                            </div>
+                            <div class="col-4">
+
+                                <input id="edit-eid" type="text" class="form-control text-center" />
+                            </div>
+                            <div class="col-4">
+                                <input id="edit-name" type="text" class="form-control text-center" />
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row d-flex align-items-center g-2">
+                            <div class="col-3">
+                                <label for="edit-serial" class="form-label mb-0">* Serial # :</label>
+                            </div>
+
+                            <div class="col-3">
+                                <input id="edit-serial" type="text" class="form-control text-center" />
+                            </div>
+
+                            <div class="col-3">
+                                <input id="edit-serial2" type="text" class="form-control text-center" />
+                            </div>
+
+                            <div class="col-auto">
+                                <button class="btn btn-sm btn-outline-secondary">
+                                    <i class="bi bi-arrow-clockwise"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fixed Footer -->
+            <div class="modal-footer bg-light border-top position-sticky bottom-0 z-3">
+                <div class="col d-flex align-items-center justify-content-start">
+
+                    <button class="btn"> 
+                        <i class="bi bi-printer"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="bi bi-printer"></i>
+                    </button>
+                    <button class="btn">
+                        <i class="bi bi-hourglass-bottom"></i>HOLD
+                    </button>
+                </div>
+                <div class="col d-flex align-items-center justify-content-end gap-3">
+
+                    <button id="btnSave" type="submit" class="btn btn-secondary" style="width:100px;">
+                        <span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+                        <span class="btn-label"><i class="bi bi-save me-1"></i> SAVE</span>
+                    </button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal" style="width:100px;">
+                        <i class="bi bi-x-circle me-1"></i> CANCEL
+                    </button>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

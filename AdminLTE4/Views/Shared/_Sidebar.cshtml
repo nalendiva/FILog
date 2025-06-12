@@ -573,17 +573,20 @@
 //     CreateMenuItem("Dashboard v3", link: "./index3.html")
 // }));
 
-    menuItems.Add(CreateMenuItem("Start Inspection", "bi-palette", "/QualityInspection/StartInspection"));
-    menuItems.Add(CreateMenuItem("Finish Inspection", "bi-palette", "/QualityInspection/FinishInspection"));
+    menuItems.Add(CreateMenuItem("Start Inspection", "bi bi-play-btn-fill", "/QualityInspection/StartInspection"));
+    menuItems.Add(CreateMenuItem("Finish Inspection", "bi bi-flag-fill", "/QualityInspection/FinishInspection"));
 
-    menuItems.Add(CreateMenuItem("Concession, Production Permit, KFC", "bi-palette", "./QualityInspection/StartInspection"));
+    menuItems.Add(CreateMenuItem("Concession, Production Permit, KFR", "bi bi-building-fill-gear", "/Conpro/Concession"));
+
     menuItems.Add(CreateMenuItem("Modify Data", "bi-palette", "./QualityInspection/StartInspection"));
     menuItems.Add(CreateMenuItem("Log Book", "bi-palette", "./QualityInspection/StartInspection"));
     menuItems.Add(CreateMenuItem("C of C", "bi-palette", "./QualityInspection/StartInspection"));
-    menuItems.Add(CreateMenuItem("Setting", "bi-palette", "./QualityInspection/StartInspection"));
+
+    menuItems.Add(CreateMenuItem("Setting", "bi bi-gear-fill", "/QualityAlert/QualityAlert"));
+
     menuItems.Add(CreateMenuItem("Drawing Mgmt", "bi-palette", "./QualityInspection/StartInspection"));
     menuItems.Add(CreateMenuItem("RMA Log", "bi-palette", "./QualityInspection/StartInspection"));
-    menuItems.Add(CreateMenuItem("Release UAMR", "bi-palette", "./QualityInspection/StartInspection"));
+    menuItems.Add(CreateMenuItem("Release UAMR", "bi-palette", "/Uamr/Index"));
 
 
 
@@ -603,7 +606,9 @@
         <a href="./index.html" class="brand-link">
             <img src="../../dist/assets/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image opacity-75 shadow" />
             <span class="brand-text fw-light"> Collins Aerospaces</span>
-            @* @hostname *@
+
+                @hostname
+            
         </a>
     </div>
 

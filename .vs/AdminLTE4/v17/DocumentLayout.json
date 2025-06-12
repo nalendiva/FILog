@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "D:\\Collins\\FILog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\data\\opsproddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\data\\opsproddbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\models\\elogmaterialmastermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\models\\elogmaterialmastermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\controllers\\productionpermitapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\controllers\\productionpermitapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\controllers\\qualityinspectionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\controllers\\qualityinspectionapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\views\\qualityinspection\\startinspection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\views\\qualityinspection\\startinspection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\filog.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\filog.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\views\\shared\\_navbar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\views\\qualityinspection\\finishinspection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\views\\qualityinspection\\finishinspection.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|d:\\collins\\filog\\adminlte4\\views\\conpro\\productionpermit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3EBC35B0-9BA3-41AA-8262-74F521D31E9B}|AdminLTE4\\FILog.csproj|solutionrelative:adminlte4\\views\\conpro\\productionpermit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,110 +34,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
           "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "AdminLTE4\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "AdminLTE4\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T09:08:35.842Z",
+              "DocumentIndex": 3,
+              "Title": "_Navbar.cshtml",
+              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeDocumentMoniker": "AdminLTE4\\Views\\Shared\\_Navbar.cshtml",
+              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Views\\Shared\\_Navbar.cshtml",
+              "RelativeToolTip": "AdminLTE4\\Views\\Shared\\_Navbar.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T00:52:55.829Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "OpsProdDbContext.cs",
-              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Data\\OpsProdDbContext.cs",
-              "RelativeDocumentMoniker": "AdminLTE4\\Data\\OpsProdDbContext.cs",
-              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Data\\OpsProdDbContext.cs",
-              "RelativeToolTip": "AdminLTE4\\Data\\OpsProdDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:23:05.963Z",
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "AdminLTE4\\Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "AdminLTE4\\Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAADYCAAAAAAAAAAAwwD4CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-12T00:52:29.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\appsettings.json",
-              "RelativeDocumentMoniker": "AdminLTE4\\appsettings.json",
-              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\appsettings.json",
-              "RelativeToolTip": "AdminLTE4\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-20T08:16:14.286Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Program.cs",
-              "RelativeDocumentMoniker": "AdminLTE4\\Program.cs",
-              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Program.cs",
-              "RelativeToolTip": "AdminLTE4\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T08:09:22.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "eLOGMaterialMasterModel.cs",
-              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Models\\eLOGMaterialMasterModel.cs",
-              "RelativeDocumentMoniker": "AdminLTE4\\Models\\eLOGMaterialMasterModel.cs",
-              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Models\\eLOGMaterialMasterModel.cs",
-              "RelativeToolTip": "AdminLTE4\\Models\\eLOGMaterialMasterModel.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T07:39:24.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "QualityInspectionApiController.cs",
               "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Controllers\\QualityInspectionApiController.cs",
               "RelativeDocumentMoniker": "AdminLTE4\\Controllers\\QualityInspectionApiController.cs",
               "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Controllers\\QualityInspectionApiController.cs",
               "RelativeToolTip": "AdminLTE4\\Controllers\\QualityInspectionApiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAI8BAAAAAAAAAADwv6gBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T07:52:01.124Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FILog",
-              "DocumentMoniker": "D:\\Collins\\FIlog\\AdminLTE4\\FILog.csproj",
-              "RelativeDocumentMoniker": "AdminLTE4\\FILog.csproj",
-              "ToolTip": "D:\\Collins\\FIlog\\AdminLTE4\\FILog.csproj",
-              "RelativeToolTip": "AdminLTE4\\FILog.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-20T03:59:09.924Z",
+              "WhenOpened": "2025-06-05T02:50:48.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StartInspection.cshtml",
-              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Views\\QualityInspection\\StartInspection.cshtml",
-              "RelativeDocumentMoniker": "AdminLTE4\\Views\\QualityInspection\\StartInspection.cshtml",
-              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Views\\QualityInspection\\StartInspection.cshtml",
-              "RelativeToolTip": "AdminLTE4\\Views\\QualityInspection\\StartInspection.cshtml",
-              "ViewState": "AgIAAAgBAAAAAAAAAADwvxEBAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-17T07:58:40.547Z"
+              "DocumentIndex": 0,
+              "Title": "ProductionPermitApiController.cs",
+              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Controllers\\ProductionPermitApiController.cs",
+              "RelativeDocumentMoniker": "AdminLTE4\\Controllers\\ProductionPermitApiController.cs",
+              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Controllers\\ProductionPermitApiController.cs",
+              "RelativeToolTip": "AdminLTE4\\Controllers\\ProductionPermitApiController.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAwwNAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T02:50:25.57Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProductionPermit.cshtml",
+              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Views\\Conpro\\ProductionPermit.cshtml",
+              "RelativeDocumentMoniker": "AdminLTE4\\Views\\Conpro\\ProductionPermit.cshtml",
+              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Views\\Conpro\\ProductionPermit.cshtml",
+              "RelativeToolTip": "AdminLTE4\\Views\\Conpro\\ProductionPermit.cshtml",
+              "ViewState": "AgIAAAEBAAAAAAAAAAAAACcBAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-05T02:50:02.02Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FinishInspection.cshtml",
+              "DocumentMoniker": "D:\\Collins\\FILog\\AdminLTE4\\Views\\QualityInspection\\FinishInspection.cshtml",
+              "RelativeDocumentMoniker": "AdminLTE4\\Views\\QualityInspection\\FinishInspection.cshtml",
+              "ToolTip": "D:\\Collins\\FILog\\AdminLTE4\\Views\\QualityInspection\\FinishInspection.cshtml",
+              "RelativeToolTip": "AdminLTE4\\Views\\QualityInspection\\FinishInspection.cshtml",
+              "ViewState": "AgIAAFECAAAAAAAAAAAwwA4AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-05T01:48:08.059Z",
+              "EditorCaption": ""
             }
           ]
         }

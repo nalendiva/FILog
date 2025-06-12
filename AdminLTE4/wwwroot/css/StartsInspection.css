@@ -1,16 +1,4 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-.form-details {
-    flex: 2;
-    align-items: center;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.card{
+﻿.card{
     border : none !important ;
 }
 
@@ -29,7 +17,7 @@
     border-radius: 8px;
     
 }
-.form-right {
+/*.form-right {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -39,21 +27,7 @@
     gap:31px;
     justify-content:center;
     border-radius: 8px;
-}
-
-
-.form-right button {
-    width: 112px;
-    padding: 6px;
-    font-size: 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: default;
-    color: black;
-    transition: 0.3s;
-    font-weight:bold;
-
-}
+}*/
 
 .table-responsive{
     padding-top:10px;
@@ -67,7 +41,6 @@
     white-space: nowrap;
     text-align: center;
 }
-
 
 .table td {
     word-break: break-all;
@@ -89,7 +62,7 @@
 
 }
 
-    /* Agar label tidak turun ke bawah */
+/* Agar label tidak turun ke bawah */
 .cell-container label {
     white-space: nowrap;
     font-weight: bold;

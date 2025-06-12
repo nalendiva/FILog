@@ -18,7 +18,7 @@
             <button class="btn btn-danger px-5 ">Delete</button>
         </div>
         <div class="table-responsive">
-            <table class="table table-bordered table-hover mt-4 ">
+            <table id="dmsTable" class="table table-bordered table-hover mt-4 display">
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -46,25 +46,40 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td colspan="23">Sample Data</td>
-                    </tr>
-                    <tr>
-                        <td colspan="23">Sample Data</td>
-                    </tr>
-                    <tr>
-                        <td colspan="23">Sample Data</td>
-                    </tr>
-                    <tr>
-                        <td colspan="23">Sample Data</td>
-                    </tr>
-                    <tr>
-                        <td colspan="23">Sample Data</td>
-                    </tr>
+                   
                 </tbody>
             </table>
         </div>
     </div>
 
 </div>
+@section Scripts{
+
+    <script>
+        $(document).ready(function(){
+
+
+            var table = $('dmsTable').DataTable({
+
+                processing:true,
+                serverSide:true,
+                ajax:{
+                    url:'',
+                    type:'',
+                    dataSrc:function(json){
+                        console.log(json;
+                        return json.data;
+                    }
+
+                },
+                columns:[
+                    {data : ''},
+                    {data:''}
+                ]
+
+            });
+        });
+    </script>
+
+}
     

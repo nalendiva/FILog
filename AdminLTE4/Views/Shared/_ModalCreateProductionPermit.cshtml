@@ -1,0 +1,71 @@
+﻿<!-- Modal Create -->
+<div class="modal fade" id="createModal" tabindex="-1" aria-labelledby="createModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <form id="createForm" class="modal-content shadow rounded-3 border-0">
+            <div class="modal-header bg-secondary text-white">
+                <h5 class="modal-title" id="createModalLabel">Tambah Data Material</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body px-4 py-3">
+                <input type="hidden" id="create-id" />
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="create-part" class="form-label">Part Number</label>
+                        <input type="text" class="form-control" id="create-part" placeholder="Masukkan Part Number" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="create-description" placeholder="Masukkan Deskripsi" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-production" class="form-label">Production</label>
+                        <input type="text" class="form-control" id="create-production" placeholder="Masukkan Production Info" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-status" class="form-label">Status</label>
+                        <input type="text" class="form-control" id="create-status" placeholder="Masukkan Status" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-start" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="create-start" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-end" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="create-end" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="create-qty" class="form-label">Qty</label>
+                        <input type="number" class="form-control" id="create-qty" placeholder="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="create-remaining" class="form-label">Remaining Qty</label>
+                        <input type="number" class="form-control" id="create-remaining" placeholder="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="create-alqty" class="form-label">Alert Qty</label>
+                        <input type="number" class="form-control" id="create-alqty" placeholder="0" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-alemail" class="form-label">Alert Email</label>
+                        <input type="email" class="form-control" id="create-alemail" placeholder="contoh@email.com" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="create-remarks" class="form-label">Remarks</label>
+                        <input type="text" class="form-control" id="create-remarks" placeholder="Catatan tambahan" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer px-4 py-3">
+                <button type="submit" class="btn btn-secondary">
+                    <i class="bi bi-plus-circle me-1"></i> Simpan
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle me-1"></i> Batal
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

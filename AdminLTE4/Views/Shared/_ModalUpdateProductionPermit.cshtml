@@ -1,0 +1,71 @@
+﻿<!-- Modal Edit -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <form id="editForm" class="modal-content shadow rounded-3 border-0">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title" id="editModalLabel">Edit Data Material</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body px-4 py-3">
+                <input type="hidden" id="edit-id" name="id" />
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="edit-part" class="form-label">Part Number</label>
+                        <input type="text" class="form-control" id="edit-part" placeholder="Masukkan Part Number" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="edit-description" placeholder="Masukkan Deskripsi" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-production" class="form-label">Production Permit</label>
+                        <input type="text" class="form-control" id="edit-production" placeholder="Masukkan Production Permit" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-status" class="form-label">Status</label>
+                        <input type="text" class="form-control" id="edit-status" placeholder="Masukkan Status" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-start" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="edit-start" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-end" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="edit-end" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="edit-qty" class="form-label">Qty</label>
+                        <input type="number" class="form-control" id="edit-qty" placeholder="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="edit-remaining" class="form-label">Remaining Qty</label>
+                        <input type="number" class="form-control" id="edit-remaining" placeholder="0" />
+                    </div>
+                    <div class="col-md-4">
+                        <label for="edit-alqty" class="form-label">Alert Qty</label>
+                        <input type="number" class="form-control" id="edit-alqty" placeholder="0" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-alemail" class="form-label">Alert Email</label>
+                        <input type="email" class="form-control" id="edit-alemail" placeholder="contoh@email.com" />
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit-remarks" class="form-label">Remarks</label>
+                        <input type="text" class="form-control" id="edit-remarks" placeholder="Catatan tambahan" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer px-4 py-3">
+                <button type="submit" class="btn btn-secondary">
+                    <i class="bi bi-save me-1"></i> Simpan
+                </button>
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    <i class="bi bi-x-circle me-1"></i> Batal
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

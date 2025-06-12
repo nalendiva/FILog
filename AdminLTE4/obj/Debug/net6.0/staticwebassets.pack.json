@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\FILog.edzx4ckpm4.bundle.scp.css"
     },
     {
-      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\css\\FinishInspection.css",
-      "PackagePath": "staticwebassets\\css\\FinishInspection.css"
-    },
-    {
       "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\css\\QualityAlert.css",
       "PackagePath": "staticwebassets\\css\\QualityAlert.css"
     },
@@ -27,10 +23,6 @@
     {
       "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\css\\StartsInspection.css",
       "PackagePath": "staticwebassets\\css\\StartsInspection.css"
-    },
-    {
-      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\css\\StyleSheet.css",
-      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
     },
     {
       "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\css\\UploadAfter.css",
@@ -467,6 +459,34 @@
     {
       "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\42c9faa5-cc5d-4fec-8c7f-f43553f77171.png",
+      "PackagePath": "staticwebassets\\uploads\\42c9faa5-cc5d-4fec-8c7f-f43553f77171.png"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\42d30ab0-4f58-488e-87d0-b39356b98e05.jpg",
+      "PackagePath": "staticwebassets\\uploads\\42d30ab0-4f58-488e-87d0-b39356b98e05.jpg"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\5f962a0e-4a1a-4341-9ab2-f0914b751caf.png",
+      "PackagePath": "staticwebassets\\uploads\\5f962a0e-4a1a-4341-9ab2-f0914b751caf.png"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\91722542-7c0a-4c59-80d0-766badf042a1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\91722542-7c0a-4c59-80d0-766badf042a1.jpg"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\989ae2f1-fb57-44b5-baea-094e3312b0c4.jpg",
+      "PackagePath": "staticwebassets\\uploads\\989ae2f1-fb57-44b5-baea-094e3312b0c4.jpg"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\a51303bc-7f25-4a4d-8346-d2469bc4c2ee.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\a51303bc-7f25-4a4d-8346-d2469bc4c2ee.jpeg"
+    },
+    {
+      "Id": "D:\\Collins\\FIlog\\AdminLTE4\\wwwroot\\uploads\\c7a22016-894e-4a7f-9673-94f90a7e2cb1.jpg",
+      "PackagePath": "staticwebassets\\uploads\\c7a22016-894e-4a7f-9673-94f90a7e2cb1.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.FILog.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

@@ -14,6 +14,5 @@ namespace FILog.Models
         public string? Order_Status { get; set; }
         public string? Current_OP { get; set; }
         public string? Current_WC { get; set; }
-
     }
 }

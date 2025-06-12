@@ -1,0 +1,421 @@
+﻿@{
+    ViewData["Title"] = "DMS Production Permit List";
+}
+
+@await Html.PartialAsync("_ConproTab")
+
+
+    <div class="card">
+        <h2 class="justify-content-center align-items-center text-center card-header">DMS Production Permit</h2>
+        <div class="card-body">
+            <div class="d-flex flex-wrap justify-content-between gap-2 mb-3">
+                <div class="col d-flex flex-wrap justify-content-start align-items-center gap-3">
+                    <button class="btn btn-secondary" id="btnPreview">
+                        <i class="bi bi-download me-1"></i> Import
+                    </button>
+                    <input type="file" id="excelFile" class="form-control d-none" />
+                    <button class="btn btn-secondary" id="btnExport">
+                        <i class="bi bi-upload me-1"></i> Export
+                    </button>
+                </div>
+                <div class="col d-flex flex-wrap justify-content-end align-items-center">
+                    <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#createModal">
+                        <i class="bi bi-plus-circle me-1"></i> Tambah Data
+                    </button>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table id="dmsTable" class="display table table-bordered table-striped table-hover " style="width:100%">
+                    <thead class="table-secondary align-middle text-center text-nowrap">
+                        <tr>
+                            <th>Part Number</th>
+                            <th>Description</th>
+                            <th>Production Permit</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Remarks</th>
+                            <th>Qty</th>
+                            <th>Remaining Qty</th>
+                            <th>Status</th>
+                            <th>Alert Qty</th>
+                            <th>Alert Email</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle text-center text-nowrap">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Preview -->
+    <div class="modal fade" id="previewModal" tabindex="-1" aria-labelledby="previewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="previewModalLabel">Preview Data</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="previewContainer" style="max-height: 60vh; overflow-y: auto;"></div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="btnSave" style="display:none;">Upload</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+@await Html.PartialAsync("_ModalCreateProductionPermit")
+@await Html.PartialAsync("_ModalUpdateProductionPermit")
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+            // Create - Submit Create Form
+            $('#createForm').submit(function (e) {
+                e.preventDefault();
+
+                const data = {
+                    part_Number: $('#create-part').val(),
+                    description: $('#create-description').val(),
+                    production_Permit: $('#create-production').val(),
+                    start_Date: $('#create-start').val(),
+                    end_Date: $('#create-end').val(),
+                    remarks: $('#create-remarks').val(),
+                    qty: parseInt($('#create-qty').val()),
+                    remaining_Qty: parseInt($('#create-remaining').val()),
+                    status: $('#create-status').val(),
+                    alert_Qty: parseInt($('#create-alqty').val()),
+                    alert_Email: $('#create-alemail').val()
+                };
+
+                // Validasi sederhana
+                if (!data.part_Number) {
+                    Swal.fire('Validasi', 'Part Number harus diisi!', 'warning');
+                    return;
+                }
+
+                $.ajax({
+                    url: '/Production/CreateData',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function (res) {
+                        $('#createModal').modal('hide');
+                        $('#createForm')[0].reset();
+                        $('#dmsTable').DataTable().ajax.reload();
+
+                        Swal.fire('Sukses', 'Data berhasil ditambahkan!', 'success');
+                    },
+                    error: function () {
+                        Swal.fire('Error', 'Gagal menambahkan data.', 'error');
+                    }
+                });
+            });
+
+
+            var table = $('#dmsTable').DataTable({
+                processing: true,
+                serverSide: true,
+
+                scrollX: true, // Aktifkan scroll horizontal
+                autoWidth: false,
+                responsive: false,
+                fixedHeader: true,
+                ajax: {
+                    url: '/Production/ReadDataAll',
+                    type: 'POST',
+                    error: function (xhr, status, error) {
+                        console.log("XHR Response:", xhr.responseText);
+                        console.log("Status:", status);
+                        console.log("Error:", error);
+                        Swal.fire("Error", "Gagal mengambil data dari server.", "error");
+                    }
+                },
+                columns: [
+                    { data: 'part_Number', className: 'text-center' },
+                    { data: 'description', className: 'text-center' },
+                    { data: 'production_Permit', className: 'text-center' },
+                    { data: 'start_Date', className: 'text-center' },
+                    { data: 'end_Date', className: 'text-center' },
+                    { data: 'remarks', className: 'text-center' },
+                    { data: 'qty', className: 'text-center' },
+                    { data: 'remaining_Qty', className: 'text-center' },
+                    { data: 'status', className: 'text-center' },
+                    { data: 'alert_Qty', className: 'text-center' },
+                    { data: 'alert_Email', className: 'text-center' },
+                    {
+                        data: 'id', className: 'text-center',
+                        render: function (data, type, row) {
+                        return `
+                        <div class="d-flex gap-3 align-item-center justify-content-center ">
+
+                            <button class="btn btn-sm btn-outline-warning btn-edit mr-3"
+                                    data-id="${data}"
+                                    data-part="${row.part_Number}"
+                                    data-description="${row.description}"
+                                    data-production="${row.production_Permit}"
+                                    data-start="${row.start_Date}"
+                                    data-end="${row.end_Date}"
+                                    data-remarks="${row.remarks}"
+                                    data-qty="${row.qty}"
+                                    data-remaining="${row.remaining_Qty}"
+                                    data-status="${row.status}"
+                                    data-alqty="${row.alert_Qty}"
+                                    data-alemail="${row.alert_Email}">
+                                <i class="bi bi-pencil-square"></i> Edit
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger btn-delete" data-id="${data}">
+                                <i class="bi bi-trash3-fill"></i> Delete
+                            </button>
+                        </div>
+                        `;
+                    },
+                    orderable: false,
+                    searchable: false
+                    }
+                ],
+                 initComplete: function () {
+                    // Tambahkan margin bawah pada input search
+                    $('#dmsTable_filter').addClass('mb-3');
+                }
+            });
+
+            // Tampilkan modal & isi data
+            $('#dmsTable').on('click', '.btn-edit', function () {
+                $('#edit-id').val($(this).data('id'));
+                $('#edit-part').val($(this).data('part'));
+                $('#edit-description').val($(this).data('description'));
+                $('#edit-production').val($(this).data('production'));
+                $('#edit-start').val(new Date($(this).data('start')).toISOString().split('T')[0]);
+                $('#edit-end').val(new Date($(this).data('end')).toISOString().split('T')[0]);
+                $('#edit-remarks').val($(this).data('remarks'));
+                $('#edit-qty').val($(this).data('qty'));
+                $('#edit-remaining').val($(this).data('remaining'));
+                $('#edit-status').val($(this).data('status'));
+                $('#edit-alqty').val($(this).data('alqty'));
+                $('#edit-alemail').val($(this).data('alemail'));
+
+                const modal = new bootstrap.Modal(document.getElementById('editModal'));
+                modal.show();
+            });
+
+            // Submit Edit Form via AJAX
+            $('#editForm').submit(function (e) {
+                e.preventDefault();
+
+                const id = $('#edit-id').val();
+                const data = {
+                    id: id,
+                    Part_Number: $('#edit-part').val(),
+                    Description: $('#edit-description').val(),
+                    Production_Permit: $('#edit-production').val(),
+                    Start_Date: $('#edit-start').val(),
+                    End_Date: $('#edit-end').val(),
+                    Remarks: $('#edit-remarks').val(),
+                    Qty: parseFloat($('#edit-qty').val()),
+                    Remaining_Qty: parseFloat($('#edit-remaining').val()),
+                    Status: $('#edit-status').val(),
+                    Alert_Qty: parseFloat($('#edit-alqty').val()),
+                    Alert_Email: $('#edit-alemail').val()
+                };
+
+                console.log("data:", data);
+
+
+                $.ajax({
+                    url: `/Production/UpdateData/${data.id}`,
+                    type: 'PUT',
+                    contentType: 'application/json',
+                    data: JSON.stringify(data),
+                    success: function () {
+                        $('#editModal').modal('hide');
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Berhasil!',
+                            text: 'Data berhasil diperbaharui.',
+                        });
+                        table.ajax.reload();
+                    },
+                    error: function () {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Gagal!',
+                            text: 'Gagal menyimpan data.',
+                        });
+                    }
+                });
+            });
+
+            // DELETE
+            $('#dmsTable').on('click', '.btn-delete', function () {
+            const id = $(this).data('id');
+
+            // Menggunakan SweetAlert untuk konfirmasi
+            Swal.fire({
+                title: 'Apakah kamu yakin?',
+                text: "Data ini akan dihapus permanen!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, hapus!',
+                cancelButtonText: 'Batal',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: `/Production/DeleteData/${id}`,
+                        type: 'DELETE',
+                        success: function () {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Berhasil!',
+                                text: 'Data berhasil dihapus.',
+                            });
+                            table.ajax.reload();  // Reload tabel setelah data dihapus
+                        },
+                        error: function () {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Gagal!',
+                                text: 'Gagal menghapus data.',
+                            });
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Dibatalkan',
+                        text: 'Penghapusan data dibatalkan.',
+                    });
+                }
+            });
+        });
+
+
+            let previewData = [];
+
+            // Saat tombol diklik, trigger input file
+             $('#btnPreview').click(function () {
+                 $('#excelFile').click(); // Trigger file input yang disembunyikan
+             });
+
+             // Ketika file dipilih, langsung kirim untuk preview
+             $('#excelFile').change(function () {
+                 const file = this.files[0];
+                 if (!file) {
+                     Swal.fire("Oops", "Pilih file terlebih dahulu!", "warning");
+                     return;
+                 }
+
+                 let formData = new FormData();
+                 formData.append('file', file);
+
+                 $.ajax({
+                     url: '/Production/PreviewExcel',
+                     type: 'POST',
+                     data: formData,
+                     contentType: false,
+                     processData: false,
+                     beforeSend: function () {
+                         $('#btnPreview').prop('disabled', true).text('Loading...');
+                     },
+                     success: function (res) {
+                         previewData = res;
+                         $('#btnPreview').prop('disabled', false).text('Upload');
+
+                         if (res.length === 0) {
+                             Swal.fire("Info", "File tidak memiliki data.", "info");
+                             return;
+                         }
+
+                         let html = '<table class="table table-bordered"><thead><tr>';
+                         for (let key in res[0]) {
+                             html += `<th>${key}</th>`;
+                         }
+                         html += '</tr></thead><tbody>';
+                         res.forEach(row => {
+                             html += '<tr>';
+                             for (let key in row) {
+                                 html += `<td>${row[key]}</td>`;
+                             }
+                             html += '</tr>';
+                         });
+                         html += '</tbody></table>';
+                         $('#previewContainer').html(html);
+                         $('#btnSave').show();
+
+                        // Show the modal
+                        const modal = new bootstrap.Modal(document.getElementById('previewModal'));
+                        modal.show();
+                     },
+                     error: function () {
+                         $('#btnPreview').prop('disabled', false).text('Upload');
+                         Swal.fire("Error", "Gagal membaca file!", "error");
+                     }
+                 });
+             });
+
+             $('#btnSave').click(function () {
+                 Swal.fire({
+                     title: 'Simpan Data?',
+                     text: 'Data akan disimpan ke dalam database.',
+                     icon: 'question',
+                     showCancelButton: true,
+                     confirmButtonText: 'Simpan',
+                     cancelButtonText: 'Batal'
+                 }).then((result) => {
+                     if (result.isConfirmed) {
+                         $.ajax({
+                             url: '/Production/ImportExcel',
+                             type: 'POST',
+                             contentType: 'application/json',
+                             data: JSON.stringify(previewData),
+                             success: function () {
+                                 Swal.fire("Berhasil", "Data berhasil disimpan!", "success");
+                                 $('#btnSave').hide();
+                                 $('#previewContainer').html('');
+                                 $('#previewModal').modal('hide');
+                                 $('#excelFile').val('');
+                                 table.ajax.reload();
+                             },
+                             error: function () {
+                                 Swal.fire("Gagal", "Terjadi kesalahan saat menyimpan data.", "error");
+                             }
+                         });
+                     }
+                 });
+             });
+
+             $('#btnExport').click(function(){
+                 $.ajax({
+                     url:'/Production/ExportExcel',
+                     method:'GET',
+                     xhrFields:{
+                         responseType:'blob'
+                     },
+                     success:function(data){
+                         const blob = new Blob([data], {
+                             type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+                         });
+                         const url = window.URL.createObjectURL(blob);
+
+                        const a = document.createElement('a');
+                        a.href = url;
+                        a.download = 'DMS_Production.xlsx';
+                        document.body.appendChild(a);
+                        a.click();
+
+                        window.URL.revokeObjectURL(url); //
+                     },
+                     error: function () {
+                        Swal.fire("Error", "Gagal mendownload file.", "error");
+                     }
+                 });
+             });
+        });
+    </script>
+}

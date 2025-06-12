@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Final Inspection";
+	ViewData["Title"] = "Final Inspection";
 }
 
 <!-- Link ke CSS -->
@@ -9,286 +9,419 @@
 @await Html.PartialAsync("_StartInspectionTab")
 
 
-<div class="row" >
-    <!-- Bagian Kiri -->
-    <div class="col-sm-6 col-12 mb-3 mb-sm-0">
-        <!-- Tombol -->
-        <div class="card" >
-            <div class="card-body d-grid gap-3 " >
-                <div class="d-flex gap-3">
-                    <button type="button" class="btn btn-secondary px-5 ">Start</button>
-                    <button type="button" class="btn btn-danger px-5">Clear</button>
-                </div>
-                <!-- Order Number -->
-                <div class="container mt-3">
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center">
-                                <label class="me-2" style="width: 120px;">Order Number:</label>
-                                <input type="text" class="form-control" id="txtOrderNumber" onkeyup="getMaterialData()" />
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center">
-                                <label class="me-2" style="width: 120px;">Operation#:</label>
-                                <input type="text" class="form-control" />
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center">
-                                <label class="me-2" style="width: 60px;">Qty:</label>
-                                <input id="txtQty" type="text" class="form-control" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="row">
+	<!-- Bagian Kiri -->
+	<div class="col-sm-6 col-12 mb-3 mb-sm-0 mt-4">
+		<!-- Tombol -->
+			<div class="d-grid gap-3 ">
+				<div class="d-flex gap-3">
+					<button id="btnStart" class="btn btn-secondary" type="button" style="width:100px;">
+						<span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+						<span class="btn-label"><i class="bi bi-play-circle me-1"></i> START</span>
+					</button>
 
-   
-                <!-- Details -->
-                <div class="card">
-                    <div class="card-body d-flex">
-                        <form class="form-details">
-                            <h3 class="mb-4">Details</h3>
-                            <div>
-                                <label class="mt-2" >Part # :</label>
-                                <input id="txtPartNumber" class="form-control" type="text" readonly />
-                            </div>
-                            <div>
-                                <label class="mt-2">Description :</label>
-                                <input id="txtDescription" class="form-control" type="text" readonly />
-                            </div>
-                            <div>
-                                <label class="mt-2">Batch # :</label>
-                                <input id="txtBatchNumber" class="form-control" type="text" readonly />
-                            </div>
-                            <div>
-                                <label class="mt-2">Cell :</label>
-                                <input id="txtCell" class="form-control" type="text" readonly />
-                            </div>
-                            <div>
-                                <label class="mt-2">Concession :</label>
-                                <input class="form-control" type="text" />
-                            </div>
-                            <div>
-                                <label class="mt-2">Prod Permit :</label>
-                                <input class="form-control" type="text" />
-                            </div>
-                        </form>
-                        <div class="form-right d-grid ">
-                            <h3> Alert</h3>
-                            <button>KFR</button>
-                            <button>Concession</button>
-                            <button>Production Permit</button>
-                            <button>Tag Label</button>
-                            <button>UAMR</button>
-                        </div>
-                    </div>
-                </div>
+				<button id="btnClear" class="btn btn-danger" type="button" style="width:100px;">
+					<span class="spinner-border spinner-border-sm me-2 d-none" role="status" aria-hidden="true"></span>
+					<span class="btn-label"><i class="bi bi-x-circle me-1"></i> CLEAR</span>
+				</button>
+				</div>
+				<!-- Order Number -->
+				<div class="card-body">
+					<div class="row g-3">
+						<div class="col-md-5">
 
-                <!-- Urgent Inspection -->
-                <div class="card " >
-                    <div class="card-body" >
-                        <h3>Urgent Inspection Request</h3>
-                        <div class="cell-container">
-                            <label for="cell-select">Cell:</label>
-                            <select id="cell-select">
-                                <option selected>All</option>
-                                <option>Cell 1</option>
-                                <option>Cell 2</option>
-                            </select>
-                        </div>
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Order #</th>
-                                        <th>Part #</th>
-                                        <th>Description</th>
-                                        <th>Batch #</th>
-                                        <th>Qty</th>
-                                        <th>Need Date</th>
-                                        <th>Remarks</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdd</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>hjbdas</td>
-                                        <td>jaskasdjbjaksbdkjabdkjabksdsadb</td>
-                                        <td>jaskdb</td>
-                                        <td>jasdddddb</td>
-                                        <td>sadasd</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                     <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                     <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-
-                                    <tr>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>asdasdbsa</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                        <td>jaskdb</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                  
-                </div>
-
-            </div>
+							<input type="hidden" id="txtUserName"  />
 
 
+							<div class="d-flex align-items-center justify-content-center">
+								<label class="form-label me-2" style="width: 120px; white-space: nowrap;">Order Number :</label>
+								<input type="text" class="form-control" id="txtOrderNumber" style="max-width: 180px;" />
+							</div>
+						</div>
+						<div class="col-md-5">
+							<div class="d-flex align-items-center justify-content-center">
+								<label class="form-label me-2" style="width: 120px; white-space: nowrap;">Operation # :</label>
+								<input type="text" class="form-control" id="txtOperation" style="max-width: 120px;" />
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="d-flex align-items-center justify-content-center">
+								<label class="form-label me-2 " style="width: 20px; white-space: nowrap;">Qty :</label>
+								<input id="txtQty" type="text" class="form-control" style="max-width: 50px;" />
+							</div>
+						</div>
+					</div>
+				</div>
 
-        </div>
-    </div>
-    <!-- Bagian Kanan -->
-    <div class="col-sm-6 col-12 ">
-        <div class="card" >
-            <div class="card-body" >
-                <h2>Quality Alert</h2>
-                <div class="row card-text" >
-                    <div class="col" >
-                        <p>Scroll the mouse to zoom in/out, click and hold the mouse to move.</p>
-                    </div>
-                   <div class="col" >
-                        <nav aria-label="...">
-                            <ul class="pagination col">
-                                <li class="page-item disabled">
-                                    <a class="page-link">Previous</a>
-                                </li>
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link" href="#">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">Next</a>
-                                </li>
-                            </ul>
-                        </nav>
-                   </div>
-                </div>
-            </div>
-            <img src="~/dist/assets/img/avatar.png" class="img-fluid" alt="No Picture Available" />
-        </div>
-    </div>
+
+				<!-- Details -->
+				<div class="card">
+					<div class="">
+						<div class="row g-4" >
+							<div class="col-md-8">	
+								<form class="d-flex flex-column align-items-stretch">
+									<h3 class="mb-4 text-center card-header">Details</h3>
+									<div class="card-body">
+										<div class="mb-2">
+											<label class="mt-2 form-label">Part # :</label>
+											<input id="txtPartNumber" class="form-control" type="text" readonly />
+										</div>
+										<div class="mb-2">
+											<label class="form-label mt-2">Description :</label>
+											<input id="txtDescription" class="form-control" type="text" readonly />
+										</div>
+										<div class="mb-2">
+											<label class="form-label mt-2">Batch # :</label>
+											<input id="txtBatchNumber" class="form-control" type="text" readonly />
+										</div>
+										<div class="mb-2">
+											<label class="form-label mt-2">Cell :</label>
+											<input id="txtFamilyPart" class="form-control" type="text" readonly />
+										</div>
+										<div class="mb-2">
+											<label class="form-label mt-2">Concession :</label>
+											<input id="txtConcession" class="form-control" type="text" readonly/>
+										</div>
+										<div class="mb-2">
+											<label class="form-label mt-2">Prod Permit :</label>
+											<input id="txtProduction" class="form-control" type="text" readonly/>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="col-md-3 d-grid gap-4 align-content-center">
+								<button id="btnAlertKFR" class="btn btn-outline-secondary w-80 py-4" type="button" disabled>KFR</button>
+								<button id="btnAlertTag" class="btn btn-outline-secondary w-80 py-4" type="button" disabled>Tag Label</button>
+								<button id="btnAlertUAMR" class="btn btn-outline-secondary w-80 py-4" type="button" disabled>UAMR</button>
+								<button id="btnAlertConcession" class="btn btn-outline-secondary w-80 py-4" type="button" disabled>Concession</button>
+								<button id="btnAlertProduction" class="btn btn-outline-secondary w-80 py-4" type="button" disabled>Production Permit</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Urgent Inspection -->
+				<div class="card ">
+					<h3 class="card-header d-flex justify-content-center align-items-center">Urgent Inspection Request</h3>
+					<div class="card-body">
+						<div class="cell-container">
+							<label for="cell-select">Cell:</label>
+							<select id="cell-select">
+								<option selected>All</option>
+								<option>Cell 1</option>
+								<option>Cell 2</option>
+							</select>
+						</div>
+						<div class="table-responsive">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th>Order #</th>
+										<th>Part #</th>
+										<th>Description</th>
+										<th>Batch #</th>
+										<th>Qty</th>
+										<th>Need Date</th>
+										<th>Remarks</th>
+									</tr>
+								</thead>
+								<tbody>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+				</div>
+			</div>
+	</div>
+	<!-- Bagian Kanan -->
+	<div class="col-sm-6 col-12 ">
+		<div class="card">
+			<h2 class="card-header d-flex justify-content-center align-items-center">Quality Alert</h2>
+			<div class="card-body">
+				<div class="row card-text">
+					<div class="col">
+						<p>Scroll the mouse to zoom in/out, click and hold the mouse to move.</p>
+					</div>
+					<div class="col">
+						<nav aria-label="...">
+							<ul class="pagination col">
+								<li class="page-item disabled">
+									<a class="page-link">Previous</a>
+								</li>
+								<li class="page-item active" aria-current="page">
+									<a class="page-link" href="#">1</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">2</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">3</a>
+								</li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<img id="qaImage" class="img-fluid" alt="No Picture Available" />
+		</div>
+	</div>
 </div>
 
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    function getMaterialData() {
-        var orderNumber = $("#txtOrderNumber").val().trim();
+	$(document).ready(function () {
+		function getMaterialData() {
+			var orderNumber = $("#txtOrderNumber").val().trim();
 
-        if (orderNumber === "") {
-            alert("No data to generate. Please input a valid Order Number.");
-            return;
-        }
-        $.ajax({
-                  url: `/QualityInspectionApi/GetByOrder/${orderNumber}`,
-                  type: "GET",
-                  success: function (data) {
-                    console.log("Data dari server:", data); // Cek di console apakah datanya muncul
-                        if (data) {
-                            $("#txtPartNumber").val(data.partNumber || "");
-                            $("#txtDescription").val(data.description || "");
-                            $("#txtBatchNumber").val(data.batchNumber || "");
-                        } else {
-                            alert("Data tidak ditemukan!");
-                        }
-                  },
-                  error: function () {
-                        console.log("Error:", xhr.responseText); // Cek error di console
-                        alert("Data tidak ditemukan atau terjadi kesalahan server!");
-                        $("#txtPartNumber, #txtDescription, #txtBatchNumber, #txtQty").val("");
-                  }
-              });
-    }
+			if (orderNumber === "") {
+				alert("No data to generate. Please input a valid Order Number.");
+				
+				return;
+			}
+			$.ajax({
+				url: `/QualityInspectionApi/GetByOrder/${orderNumber}`,
+				type: "GET",
+				success: function (data) {
+				console.log("Data dari server:", data); // Cek di console apakah datanya muncul
+						if (data) {
+							$("#txtPartNumber").val(data.partNumber || "");
+							$("#txtDescription").val(data.description || "");
+							$("#txtBatchNumber").val(data.batchNumber || "");
+							$("#txtQty").val(data.quantity || "");
+							$("#txtFamilyPart").val(data.familyPart || "");
+							$("#txtConcession").val(data.concession || "");
+							$("#txtProduction").val(data.production || "");
+
+							
+
+
+							if (data.concession && data.concession !== "N/A"){
+								$("#btnAlertConcession")
+									.removeClass("btn-outline-secondary")
+									.addClass("btn-warning");
+							} else{
+								$("#btnAlertConcession")
+									.removeClass("btn-warning")
+									.addClass("btn-outline-secondary");
+							}
+
+							if (
+								data.status &&
+								data.status.toLowerCase() === "active" &&
+								data.status !== "N/A" &&
+								data.production &&
+								data.production !== "N/A"
+							) {
+								// Aktif: Tampilkan data produksi dan ubah tombol jadi warning
+								$("#txtProduction").val(data.production); // tampilkan value production
+								$("#btnAlertProduction")
+									.removeClass("btn-outline-secondary")
+									.addClass("btn-warning");
+							} else {
+								// Inaktif atau N/A: kosongkan field dan tombol jadi default
+								$("#txtProduction").val(data.production); // kosongkan jika tidak aktif
+								$("#btnAlertProduction")
+									.removeClass("btn-warning")
+									.addClass("btn-outline-secondary");
+							}
+
+
+							if (data.isKFRActive) {
+								$("#btnAlertKFR")
+									.removeClass("btn-outline-secondary")
+									.addClass("btn-warning");
+							}else{
+								$("#btnAlertKFR")
+									.removeClass("btn-warning")
+									.addClass("btn-outline-secondary");
+							}
+
+							if (data.isUamr) {
+								$("#btnAlertUAMR")
+									.removeClass("btn-outline-secondary")
+									.addClass("btn-warning");
+							}else{
+								$("#btnAlertUAMR")
+									.removeClass("btn-warning")
+									.addClass("btn-outline-secondary");
+							}
+
+
+
+							if (data.tagLabel && data.tagLabel.toLowerCase() === "yes" && data.tagLabel !== "N/A") {
+								$("#btnAlertTag")
+									.removeClass("btn-outline-secondary")
+									.addClass("btn-warning");
+							} else {
+								$("#btnAlertTag")
+									.removeClass("btn-warning")
+									.addClass("btn-outline-secondary");
+							}
+
+
+							if (data.imageUrl) {
+								$('#qaImage').attr('src', data.imageUrl);
+								$('#qaImage').attr('alt', 'Uploaded Image');
+							} else {
+								$('#qaImage').attr('src', '/dist/assets/img/avatar.png');
+								$('#qaImage').attr('alt', 'No Picture Available');
+							}
+
+						} else {
+							alert("Data tidak ditemukan!");
+						}
+				  },
+				  error: function () {
+						console.log("Error:", xhr.responseText); // Cek error di console
+						alert("Data tidak ditemukan atau terjadi kesalahan server!");
+						$("#txtPartNumber, #txtDescription, #txtBatchNumber, #txtQty").val("");
+				  }
+			  });
+		}
+
+		$("#txtOrderNumber").on("keyup", function () {
+			getMaterialData();
+		});
+
+		function clearBtn(){
+			const $btn = $("#btnClear");
+			const $spinner = $btn.find(".spinner-border");
+			const $label = $btn.find(".btn-label");
+
+			$spinner.removeClass("d-none");
+			$label.text("Clearing...");
+			$btn.prop("disabled", true);
+
+
+				// Simulasi delay
+				setTimeout(function () {
+					// Kosongkan semua input
+					$("#txtOrderNumber").val("").focus();
+					$("#txtPartNumber").val("").prop("readonly", true);
+					$("#txtDescription").val("").prop("readonly", true);
+					$("#txtOperation").val("");
+					$("#txtBatchNumber").val("");
+					$("#txtQty").val("");
+					$("#txtFamilyPart").val("");
+					$("#txtConcession").val("");
+					$("#txtProduction").val("");
+
+				$("#btnAlertKFR")
+					.removeClass("")
+					.addClass("btn btn-outline-secondary w-100 py-4 disabled");
+
+
+				$("#btnAlertConcession")
+					.removeClass()
+					.addClass("btn btn-outline-secondary w-100 py-4 disabled");
+
+				$("#btnAlertProduction")
+					.removeClass()
+					.addClass("btn btn-outline-secondary w-100 py-4 disabled");
+
+				$("#btnAlertTag")
+					.removeClass()
+					.addClass("btn btn-outline-secondary w-100 py-4 disabled");
+				$("#btnAlertUAMR")
+					.removeClass()
+					.addClass("btn btn-outline-secondary w-100 py-4 disabled");
+
+
+					// Kembalikan tombol ke kondisi awal
+					$spinner.addClass("d-none");
+					$label.html('<i class="bi bi-x-circle me-1"></i> CLEAR');
+					$btn.prop("disabled", false);
+				}, 500); // ⏳ durasi simulasi pembersihan
+				
+				}
+
+
+
+		$("#btnClear").on("click", function () {
+			clearBtn();
+		});
+
+
+
+
+
+
+		function saveFiLog() {
+
+			const now = new Date(); // ⬅️ ini fix-nya
+
+			const timeString = now.toTimeString().split(' ')[0]; // "HH:mm:ss"
+
+			const data = {
+				Order_Number: $("#txtOrderNumber").val().trim(),
+				Part_Number: $("#txtPartNumber").val().trim(), // asumsi sama seperti Part Number
+				Description: $("#txtDescription").val().trim(),
+				Operation: $("#txtOperation").val().trim(),
+				Batch_Number: $("#txtBatchNumber").val().trim(),
+				Qty: parseInt($("#txtQty").val().trim()) || 0, // fallback ke 0 jika kosong atau bukan angka
+				Cell: $("#txtFamilyPart").val().trim(),
+				Concession: $("#txtConcession").val().trim(),
+				Production_Permit: $("#txtProduction").val().trim(),
+				Start_Date: now.toISOString(),  // ⬅️ format ISO lengkap: "2025-05-15T07:33:01.123Z"
+				Start_Time: timeString
+
+			};
+
+				// ✅ Spinner ON
+				const $btn = $("#btnStart");
+				const $spinner = $btn.find(".spinner-border");
+				const $label = $btn.find(".btn-label");
+
+				$spinner.removeClass("d-none");
+				$label.text("STARTING...");
+				$btn.prop("disabled", true);
+
+			// ⏳ SweetAlert Loading
+			let loadingAlert = Swal.fire({
+				title: 'Menyimpan...',
+				text: 'Mohon tunggu sebentar.',
+				allowOutsideClick: false,
+				didOpen: () => {
+					Swal.showLoading();
+				}
+			});
+
+
+			console.log("Data yang dikirim:", JSON.stringify(data));
+
+			$.ajax({
+				url: "/QualityInspectionApi/SaveInspection",
+				method: "POST",
+				contentType: "application/json",
+				data: JSON.stringify(data),
+				success: function (res) {
+
+					Swal.fire('Sukses', 'Data berhasil ditambahkan!', 'success');
+					clearBtn();
+				},
+				error: function () {
+					Swal.fire('Error', 'Gagal menambahkan data.', 'error');
+				},
+				complete: function () {
+					// ✅ Spinner OFF
+					$spinner.addClass("d-none");
+					$label.html('<i class="bi bi-play-circle me-1"></i> START');
+					$btn.prop("disabled", false);
+				}
+			});
+		
+		}
+		$("#btnStart").on("click", function () {
+			saveFiLog();
+		});
+	
+
+	});
 </script>

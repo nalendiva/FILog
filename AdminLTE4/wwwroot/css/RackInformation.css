@@ -1,8 +1,4 @@
-﻿body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-.table-container {
+﻿.table-container {
     display: flex;
     justify-content: center;
     margin-top: 20px;

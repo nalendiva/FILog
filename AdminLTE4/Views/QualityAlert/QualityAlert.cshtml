@@ -1,0 +1,121 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Quality Alert";
+}
+<div class="mt-2">
+    <div class="card">
+            <form id="createDataForm" class="d-flex g-3 align-items-center gap-3 mb-3 card-header" action="/" method="post" enctype="multipart/form-data">
+        
+                <div  class="d-flex align-items-center gap-2">
+                    <label for="Part_Number" class="form-label">Part Number :</label>
+                    <input id="Part_Number" class="form-control" type="text" name="Part_Number" value="" required />
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <label for="Image" class="form-label" >Description</label>
+                    <input id="Image" class="form-control" type="file" name="Image" value="" required />
+
+                </div>
+                <div class="">
+                    <button id="submitButton" class="btn btn-secondary">Add File</button>
+                </div>
+
+            </form>
+        <div class="card-body">
+            <table id="dmsTable" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>Part Number</th>
+                    <th>Image</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+
+              // AJAX Submit Form
+            $('#createDataForm').on('submit', function (e) {
+                e.preventDefault();
+
+                var formData = new FormData(this); // Create FormData object
+
+                $.ajax({
+                    url: '/QualityAlert/CreateData', // Route to the CreateData action
+                    type: 'POST',
+                    data: formData,
+                    processData: false, // Don't process the data
+                    contentType: false, // Don't set content type
+                    success: function (response) {
+                        // Handle success
+                        alert(response.message); // Show success message
+
+                        // Optionally, you can reload the DataTable
+                        table.ajax.reload();
+
+                        // Optionally, clear the form
+                        $('#createDataForm')[0].reset();
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle error
+                        alert("Error: " + xhr.responseText);
+                    }
+                });
+            });
+
+
+            var table = $('#dmsTable').DataTable({
+
+                processing: true,
+                serverSide: true,
+                ajax: {
+                    url: '/QualityAlert/ReadData',
+                    type: 'POST',
+                    dataSrc: function (json) {
+                        console.log(json); // ✅ Lihat isi respon backend di console
+                        return json.data;
+                    }
+
+                },
+                        columns: [
+                            { data: 'part_Number' },
+                            {
+                                data: 'image',
+                                render: function (data) {
+                                    return data
+                                        ? `<img src="/uploads/${data}" width="100"/>`
+                                        : "No image";
+                                }
+                            },
+                            {
+                                data: 'id',
+                                render: function (data, type, row) {
+                                    return `
+                                        <div class="d-flex gap-3 align-items-center justify-content-center">
+                                            <button class="btn btn-sm btn-outline-warning btn-edit mr-3"
+                                                    data-id="${data}"
+                                                    data-part="${row.part_Number}"
+                                                    data-image="${row.image}">
+                                                <i class="bi bi-pencil-square"></i> Edit
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger btn-delete" data-id="${data}">
+                                                <i class="bi bi-trash3-fill"></i> Delete
+                                            </button>
+                                        </div>
+                                    `;
+                                }
+                            }
+                        ]
+
+            });
+
+        });
+    </script>
+}
